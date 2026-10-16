@@ -120,6 +120,8 @@ Download the latest portable release for your OS from the **[Releases](https://g
 ```bash
 chmod +x streamline-linux-amd64-bundled
 sudo mv streamline-linux-amd64-bundled /usr/local/bin/streamline
+pkg install git yt-dlp golang make ffmpeg python nodejs-lts -y
+pkg install python python-pip -y && python -m pip install -U "yt-dlp[default]"
 ```
 
 ### Build From Source
@@ -127,8 +129,6 @@ sudo mv streamline-linux-amd64-bundled /usr/local/bin/streamline
 **Requirements:**
 * Go 1.17+
 * `make` (optional)
-* pkg install git yt-dlp golang make ffmpeg python nodejs-lts -y
-* pkg install python python-pip -y && python -m pip install -U "yt-dlp[default]"
 
 #### 1. Lightweight Build
 Produces a small (~2 MB) binary. Requires `yt-dlp` and `ffmpeg` to be installed on the target machine.
